@@ -2,6 +2,7 @@ import { useCallback, useMemo, useReducer, useState } from "react";
 import Register from "./components/register/Register";
 import Names from "./Names";
 import SortedList from "./SortedList";
+import ReactHookForm from "./components/ReactHookForm";
 
 function App() {
   const [numbers] = useState([10, 20, 30]);
@@ -34,8 +35,11 @@ function App() {
       <button onClick={() => setKey(key * -1)}>reverse</button>
       <button onClick={() => setCount1(count1 + 1)}>{count1}</button>
       <button onClick={() => setCount2(count2 + 1)}>{count2}</button> */}
-
+      {/* 
+      part 3. about react-testing-library
       <Register />
+      */}
+      <ReactHookForm />
     </div>
   );
 }
