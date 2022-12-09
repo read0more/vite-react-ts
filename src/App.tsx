@@ -1,4 +1,5 @@
 import { useCallback, useMemo, useReducer, useState } from "react";
+import Register from "./components/register/Register";
 import Names from "./Names";
 import SortedList from "./SortedList";
 
@@ -15,14 +16,26 @@ function App() {
 
   return (
     <div className='App'>
+      {/* 
+      part 1. about useReducer
+      <Names /> 
+      */}
+
+      {/* 
+      part 2. about useCallback, useMemo
+      <Names /> 
+      */}
+
+      {/* 
       <div>total: {total}</div>
       <div>countTotal: {countTotal}</div>
       <div>names: {list.join(', ')}</div>
       <SortedList list={list} sortFunc={sortFunc} />
       <button onClick={() => setKey(key * -1)}>reverse</button>
       <button onClick={() => setCount1(count1 + 1)}>{count1}</button>
-      <button onClick={() => setCount2(count2 + 1)}>{count2}</button>
-      {/* <Names /> */}
+      <button onClick={() => setCount2(count2 + 1)}>{count2}</button> */}
+
+      <Register />
     </div>
   );
 }
