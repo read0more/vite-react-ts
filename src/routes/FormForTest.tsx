@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import ControllerForm from "./ControllerForm";
 import { useForm } from "react-hook-form";
 import { Form } from "react-bootstrap";
+import ControllerForm from "../components/FormForTest/ControllerForm";
 
 type Inputs = {
   email: string;
