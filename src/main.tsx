@@ -1,18 +1,17 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import Root from "./routes/Root";
 // import Names from "./routes/Names";
 // import Sort from "./routes/Sort";
 // import FormForTest from "./routes/FormForTest";
 
-const Root = lazy(() => import("./routes/Root"));
-const Names = lazy(() => import("./routes/Names"));
-const Sort = lazy(() => import("./routes/Sort"));
-const FormForTest = lazy(() => import("./routes/FormForTest"));
+const Root = lazy(() => import("./routes/basicHooks/Root"));
+const Names = lazy(() => import("./routes/basicHooks/Names"));
+const Sort = lazy(() => import("./routes/basicHooks/Sort"));
+const FormForTest = lazy(() => import("./routes/basicHooks/FormForTest"));
+const Timer = lazy(() => import("./routes/basicHooks/Timer"));
+const Ref = lazy(() => import("./routes/basicHooks/Ref"));
 
 const router = createBrowserRouter([
   {
@@ -30,7 +29,19 @@ const router = createBrowserRouter([
   {
     path: "/test-tutorial",
     element: <FormForTest />,
-  }
+  },
+  {
+    path: "/test-tutorial",
+    element: <FormForTest />,
+  },
+  {
+    path: "/timer",
+    element: <Timer />,
+  },
+  {
+    path: "/ref",
+    element: <Ref />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
