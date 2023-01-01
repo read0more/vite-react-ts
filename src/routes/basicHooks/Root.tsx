@@ -27,6 +27,9 @@ export default function Root() {
         <li>
           <Link to={`ref`}>useRef with new ID and focus input</Link>
         </li>
+        <li>
+          <Link to={`context`}>useContext</Link>
+        </li>
       </ul>
     </details>
   );

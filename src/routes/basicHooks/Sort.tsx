@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from "react";
-import SortedList from "components/SortedList";
+import SortedList from "@/components/SortedList";
 
 export default function Sort() {
   const [numbers] = useState([10, 20, 30]);

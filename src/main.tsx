@@ -12,6 +12,7 @@ const Sort = lazy(() => import("./routes/basicHooks/Sort"));
 const FormForTest = lazy(() => import("./routes/basicHooks/FormForTest"));
 const Timer = lazy(() => import("./routes/basicHooks/Timer"));
 const Ref = lazy(() => import("./routes/basicHooks/Ref"));
+const Context = lazy(() => import("./routes/basicHooks/Context"));
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/ref",
     element: <Ref />,
+  },
+  {
+    path: "/context",
+    element: <Context />,
   },
 ]);
 
