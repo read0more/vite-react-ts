@@ -67,7 +67,7 @@ function usePokemonSource() {
   dispatch({ type: "SET_TERM", payload: term }), [])
 
   const filteredPokemon = useMemo(
-    () => pokemon.filter((p) => p.name.toLowerCase().includes(term)),
+    () => pokemon.filter((p) => p.name.toLowerCase().includes(term.toLowerCase())),
     [pokemon, term]
   );
 
