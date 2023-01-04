@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import TransitionAndDeferredValue from "./routes/basicHooks/TransitionAndDeferredValue";
 // import Root from "./routes/Root";
 // import Names from "./routes/Names";
 // import Sort from "./routes/Sort";
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
     path: "/context",
     element: <Context />,
   },
+  {
+    path: "/transition-and-deferred-value",
+    element: <TransitionAndDeferredValue />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

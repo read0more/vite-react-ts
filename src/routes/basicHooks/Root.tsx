@@ -30,6 +30,9 @@ export default function Root() {
         <li>
           <Link to={`context`}>useContext</Link>
         </li>
+        <li>
+          <Link to={`transition-and-deferred-value`}>useTransition and useDeferredValue</Link>
+        </li>
       </ul>
     </details>
   );
