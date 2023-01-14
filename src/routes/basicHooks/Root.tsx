@@ -7,7 +7,7 @@ export default function Root() {
     display: "inline",
     fontWeight: "bold",
   };
-  
+
   return (
     <details style={rootMenuStyle}>
       <summary>React Hooks</summary>
@@ -31,10 +31,15 @@ export default function Root() {
           <Link to={`context`}>useContext</Link>
         </li>
         <li>
-          <Link to={`transition-and-deferred-value`}>useTransition and useDeferredValue</Link>
+          <Link to={`transition-and-deferred-value`}>
+            useTransition and useDeferredValue
+          </Link>
         </li>
         <li>
           <Link to={`layout-effect`}>useLayoutEffect</Link>
+        </li>
+        <li>
+          <Link to={`imperative-handle`}>useImperativeHandle</Link>
         </li>
       </ul>
     </details>

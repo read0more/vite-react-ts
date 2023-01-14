@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ImperativeHandle from "./routes/basicHooks/ImperetiveHandle";
 import LayoutEffect from "./routes/basicHooks/LayoutEffect";
 import TransitionAndDeferredValue from "./routes/basicHooks/TransitionAndDeferredValue";
 // import Root from "./routes/Root";
@@ -56,7 +57,11 @@ const router = createBrowserRouter([
   {
     path: "/layout-effect",
     element: <LayoutEffect />,
-  }
+  },
+  {
+    path: "/imperative-handle",
+    element: <ImperativeHandle />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
