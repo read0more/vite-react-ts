@@ -33,6 +33,9 @@ export default function Root() {
         <li>
           <Link to={`transition-and-deferred-value`}>useTransition and useDeferredValue</Link>
         </li>
+        <li>
+          <Link to={`layout-effect`}>useLayoutEffect</Link>
+        </li>
       </ul>
     </details>
   );

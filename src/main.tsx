@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LayoutEffect from "./routes/basicHooks/LayoutEffect";
 import TransitionAndDeferredValue from "./routes/basicHooks/TransitionAndDeferredValue";
 // import Root from "./routes/Root";
 // import Names from "./routes/Names";
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/transition-and-deferred-value",
     element: <TransitionAndDeferredValue />,
+  },
+  {
+    path: "/layout-effect",
+    element: <LayoutEffect />,
   }
 ]);
 
