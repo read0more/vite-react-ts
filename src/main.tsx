@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ImperativeHandle from "./routes/basicHooks/ImperetiveHandle";
 import LayoutEffect from "./routes/basicHooks/LayoutEffect";
 import TransitionAndDeferredValue from "./routes/basicHooks/TransitionAndDeferredValue";
+import Redux from "./routes/Redux";
 // import Root from "./routes/Root";
 // import Names from "./routes/Names";
 // import Sort from "./routes/Sort";
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
   {
     path: "/imperative-handle",
     element: <ImperativeHandle />,
+  },
+  {
+    path: "/redux",
+    element: <Redux />,
   },
 ]);
 
