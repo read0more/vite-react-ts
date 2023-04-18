@@ -4,7 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ImperativeHandle from "./routes/basicHooks/ImperetiveHandle";
 import LayoutEffect from "./routes/basicHooks/LayoutEffect";
 import TransitionAndDeferredValue from "./routes/basicHooks/TransitionAndDeferredValue";
-import Redux from "./routes/Redux";
+import Redux from "./routes/redux";
+import { store } from "./routes/redux/store";
+import { Provider } from "react-redux";
 // import Root from "./routes/Root";
 // import Names from "./routes/Names";
 // import Sort from "./routes/Sort";
@@ -72,7 +74,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Suspense fallback={<div>Loading...</div>}>
-      <RouterProvider router={router} />
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
     </Suspense>
   </React.StrictMode>
 );
