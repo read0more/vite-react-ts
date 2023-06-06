@@ -4,21 +4,18 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ImperativeHandle from "./routes/basicHooks/ImperetiveHandle";
 import LayoutEffect from "./routes/basicHooks/LayoutEffect";
 import TransitionAndDeferredValue from "./routes/basicHooks/TransitionAndDeferredValue";
-import Redux from "./routes/redux";
 import { store } from "./routes/redux/store";
+import Redux from "./routes/redux";
 import { Provider } from "react-redux";
-// import Root from "./routes/Root";
-// import Names from "./routes/Names";
-// import Sort from "./routes/Sort";
-// import FormForTest from "./routes/FormForTest";
+import Root from "./routes/basicHooks/Root";
+import Names from "./routes/basicHooks/Names";
+import Sort from "./routes/basicHooks/Sort";
+import FormForTest from "./routes/basicHooks/FormForTest";
+import Timer from "./routes/basicHooks/Timer";
+import Ref from "./routes/basicHooks/Ref";
+import Context from "./routes/basicHooks/Context";
+import Compound from "./routes/practice/Compound";
 
-const Root = lazy(() => import("./routes/basicHooks/Root"));
-const Names = lazy(() => import("./routes/basicHooks/Names"));
-const Sort = lazy(() => import("./routes/basicHooks/Sort"));
-const FormForTest = lazy(() => import("./routes/basicHooks/FormForTest"));
-const Timer = lazy(() => import("./routes/basicHooks/Timer"));
-const Ref = lazy(() => import("./routes/basicHooks/Ref"));
-const Context = lazy(() => import("./routes/basicHooks/Context"));
 
 const router = createBrowserRouter([
   {
@@ -66,9 +63,13 @@ const router = createBrowserRouter([
     element: <ImperativeHandle />,
   },
   {
+    path: "/compound",
+    element: <Compound />,
+  },
+  {
     path: "/redux",
     element: <Redux />,
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
