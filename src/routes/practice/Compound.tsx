@@ -22,11 +22,11 @@ export default function Compound() {
         </Modal.FullScreen>
       </Modal>
       <Modal isOpen={modal2IsOpen}>
-        <Modal.DimBody onClick={() => setModal2IsOpen(false)}/>
-        <Modal.FixedBottom>
+        <Modal.DimBody closeModal={() => setModal2IsOpen(false)}/>
+        <Modal.BottomSheet closeModal={() => setModal2IsOpen(false)} height={150}>
           <Modal.Title>TITLE</Modal.Title>
           <Modal.CloseButton onClick={() => setModal2IsOpen(false)} />
-        </Modal.FixedBottom>
+        </Modal.BottomSheet>
       </Modal>
     </>
   );

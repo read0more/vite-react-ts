@@ -15,10 +15,13 @@
     "react": "^18.2.0",
     "react-bootstrap": "2.6.0",
     "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
+    "react-feather": "^2.0.10",
     "react-hook-form": "^7.40.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.0",
-    "react-select": "^5.7.0"
+    "react-select": "^5.7.0",
+    "styled-components": "^6.0.0-rc.3"
   },
   "devDependencies": {
     "@babel/register": "^7.18.9",
