@@ -16,7 +16,6 @@ import Ref from "./routes/basicHooks/Ref";
 import Context from "./routes/basicHooks/Context";
 import Compound from "./routes/practice/Compound";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
