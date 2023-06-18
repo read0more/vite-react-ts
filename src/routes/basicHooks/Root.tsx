@@ -53,6 +53,9 @@ export default function Root() {
         <li>
           <Link to={`compound`}>Compound Component Pattern</Link>
         </li>
+        <li>
+          <Link to={`suspense`}>Suspense</Link>
+        </li>
       </ul>
     </details>
     </>

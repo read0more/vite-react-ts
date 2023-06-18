@@ -15,6 +15,7 @@ import Timer from "./routes/basicHooks/Timer";
 import Ref from "./routes/basicHooks/Ref";
 import Context from "./routes/basicHooks/Context";
 import Compound from "./routes/practice/Compound";
+import SuspenseTest from "./routes/practice/SuspenseTest";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
   {
     path: "/redux",
     element: <Redux />,
+  },
+  {
+    path: "/suspense",
+    element: <SuspenseTest />,
   }
 ]);
 
