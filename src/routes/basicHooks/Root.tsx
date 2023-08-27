@@ -56,6 +56,9 @@ export default function Root() {
         <li>
           <Link to={`suspense`}>Suspense</Link>
         </li>
+        <li>
+          <Link to={`daum-postcode`}>DaumPostcode</Link>
+        </li>
       </ul>
     </details>
     </>

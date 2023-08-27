@@ -16,6 +16,7 @@ import Ref from "./routes/basicHooks/Ref";
 import Context from "./routes/basicHooks/Context";
 import Compound from "./routes/practice/Compound";
 import SuspenseTest from "./routes/practice/SuspenseTest";
+import DaumPostcode from "./routes/practice/DaumPostcode";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
   {
     path: "/suspense",
     element: <SuspenseTest />,
+  },
+  {
+    path: "daum-postcode",
+    element: <DaumPostcode />
   }
 ]);
 
