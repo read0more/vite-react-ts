@@ -7,7 +7,7 @@ import TransitionAndDeferredValue from "./routes/basicHooks/TransitionAndDeferre
 import { store } from "./routes/redux/store";
 import Redux from "./routes/redux";
 import { Provider } from "react-redux";
-import Root from "./routes/basicHooks/Root";
+import Root from "./routes/Root";
 import Names from "./routes/basicHooks/Names";
 import Sort from "./routes/basicHooks/Sort";
 import FormForTest from "./routes/basicHooks/FormForTest";
@@ -17,6 +17,7 @@ import Context from "./routes/basicHooks/Context";
 import Compound from "./routes/practice/Compound";
 import SuspenseTest from "./routes/practice/SuspenseTest";
 import DaumPostcode from "./routes/practice/DaumPostcode";
+import ReactHookForm from "./routes/practice/ReactHookForm";
 
 const router = createBrowserRouter([
   {
@@ -77,8 +78,12 @@ const router = createBrowserRouter([
   },
   {
     path: "daum-postcode",
-    element: <DaumPostcode />
-  }
+    element: <DaumPostcode />,
+  },
+  {
+    path: "react-hook-form",
+    element: <ReactHookForm />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
