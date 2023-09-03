@@ -134,3 +134,119 @@ export default function ReactHookForm() {
     </FormProvider>
   );
 }
+
+// yup으로 했을 경우
+/*
+import React, { useState } from "react";
+import Modal from "@/components/Modal";
+import { FormProvider, useForm, useFormContext } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const validationSchema = yup.object().shape({
+  name: yup.string().required("Name is required"),
+  email: yup
+    .string()
+    .required("Email is required")
+    .email("Must be a valid email"),
+  password: yup
+    .string()
+    .required()
+    .min(6, "Password must be at least 6 characters"),
+  confirmPassword: yup
+    .string()
+    .required("Confirm Password is required")
+    .oneOf([yup.ref("password"), ""], "Passwords must match"),
+  terms: yup
+    .boolean()
+    .required()
+    .oneOf([true], "You must accept Terms and Conditions"),
+});
+
+type FormValues = yup.InferType<typeof validationSchema>;
+
+const ModalContent = ({
+  submitModal,
+  closeModal,
+}: {
+  submitModal: () => void;
+  closeModal: () => void;
+}) => {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext<FormValues>();
+
+  return (
+    <form onSubmit={submitModal}>
+      <div>
+        <label htmlFor='name'>Name</label>
+        <input {...register("name")} type='text' />
+        {errors.name && <p>{errors.name.message}</p>}
+      </div>
+      <div>
+        <label htmlFor='email'>Email</label>
+        <input {...register("email")} type='email' />
+        {errors.email && <p>{errors.email.message}</p>}
+      </div>
+      <div>
+        <label htmlFor='password'>Password</label>
+        <input {...register("password")} type='password' />
+        {errors.password && <p>{errors.password.message}</p>}
+      </div>
+      <div>
+        <label htmlFor='confirmPassword'>Confirm Password</label>
+        <input {...register("confirmPassword")} type='password' />
+        {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
+      </div>
+      <div>
+        <label htmlFor='terms'>Terms and Conditions</label>
+        <input type='checkbox' {...register("terms")} />
+        {errors.terms && <p>{errors.terms.message}</p>}
+      </div>
+      <button type='button' onClick={closeModal}>
+        Close
+      </button>
+      <button type='submit'>Submit</button>
+    </form>
+  );
+};
+
+export default function ReactHookForm() {
+  const [modal1IsOpen, setModal1IsOpen] = useState(true);
+  const [states, setStates] = useState<Partial<FormValues>>({
+    name: "read",
+    email: "asd@test.com",
+  });
+  const reactHookFormMethods = useForm<FormValues>({
+    resolver: yupResolver(validationSchema),
+    mode: "onBlur",
+    defaultValues: states,
+  });
+
+  const submitModal = reactHookFormMethods.handleSubmit((data) => {
+    setStates(data);
+    setModal1IsOpen(false);
+  });
+
+  function closeModal() {
+    setModal1IsOpen(false);
+    reactHookFormMethods.reset(states);
+  }
+
+  return (
+    <FormProvider {...reactHookFormMethods}>
+      <button onClick={() => setModal1IsOpen(true)}>Open Modal</button>
+      <Modal isOpen={modal1IsOpen}>
+        <Modal.FullScreen>
+          <Modal.Title>
+            <ModalContent closeModal={closeModal} submitModal={submitModal} />
+          </Modal.Title>
+          <Modal.CloseButton onClick={closeModal} />
+        </Modal.FullScreen>
+      </Modal>
+    </FormProvider>
+  );
+}
+
+*/
