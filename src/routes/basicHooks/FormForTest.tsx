@@ -9,7 +9,7 @@ type Inputs = {
   skills: string[];
 };
 
-export default function index() {
+export default function FormForTest() {
   const defaultValues = {
     email: "read0more@gmail.com",
     gender: "male",
