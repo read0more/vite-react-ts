@@ -19,7 +19,7 @@ import SuspenseTest from "./routes/practice/SuspenseTest";
 import DaumPostcode from "./routes/practice/DaumPostcode";
 import ReactHookForm from "./routes/practice/ReactHookForm";
 import "./assets/index.css";
-
+import UseForm from "./routes/practice/UseForm";
 
 const router = createBrowserRouter([
   {
@@ -85,6 +85,10 @@ const router = createBrowserRouter([
   {
     path: "react-hook-form",
     element: <ReactHookForm />,
+  },
+  {
+    path: "use-form",
+    element: <UseForm />,
   },
 ]);
 
