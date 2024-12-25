@@ -20,6 +20,7 @@ import DaumPostcode from "./routes/practice/DaumPostcode";
 import ReactHookForm from "./routes/practice/ReactHookForm";
 import "./assets/index.css";
 import UseForm from "./routes/practice/UseForm";
+import Textareas from "./routes/Textareas";
 
 const router = createBrowserRouter([
   {
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
   {
     path: "use-form",
     element: <UseForm />,
+  },
+  {
+    path: "ios-bug-textareas",
+    element: <Textareas />,
   },
 ]);
 
