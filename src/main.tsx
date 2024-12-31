@@ -21,6 +21,7 @@ import ReactHookForm from "./routes/practice/ReactHookForm";
 import "./assets/index.css";
 import UseForm from "./routes/practice/UseForm";
 import Textareas from "./routes/Textareas";
+import GlobalMixinTest from "./routes/GlobalMixinTest";
 
 const router = createBrowserRouter([
   {
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
     path: "ios-bug-textareas",
     element: <Textareas />,
   },
+  {
+    path: "global-mixin-test",
+    element: <GlobalMixinTest />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
